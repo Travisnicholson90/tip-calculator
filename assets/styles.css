@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@100;200;300&family=Inter:wght@400;700;800&family=Kumbh+Sans:wght@400;700&family=Libre+Franklin:wght@300;600;700&family=Manrope:wght@500;700&family=Overpass:wght@400;700&family=Plus+Jakarta+Sans:wght@500;800&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,700&family=Space+Grotesk:wght@500&family=Space+Mono:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@100;200;300&family=Exo:wght@600&family=Gajraj+One&family=Inter:wght@400;700;800&family=Kumbh+Sans:wght@400;700&family=League+Spartan:wght@700&family=Libre+Franklin:wght@300;600;700&family=Manrope:wght@500;700&family=Overpass:wght@400;700&family=Plus+Jakarta+Sans:wght@500;800&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,700&family=Space+Grotesk:wght@500&family=Space+Mono:wght@700&display=swap');
+
+:root {    
+    /* backgrounds */
+
+    /* main background */
+    --Very-dark-desaturated-blue-main: hsl(222, 26%, 31%);
+    /* toggle background, keypad background */
+    --Very-dark-desaturated-blue-keypad: hsl(223, 31%, 20%);
+    /* screen background */
+    --Very-dark-desaturated-blue-screen: hsl(224, 36%, 15%);
+    
+    /* Keys */
+
+    /* key background */
+    --Desaturated-dark-blue-key-background: hsl(225, 21%, 49%);
+    /* key shadow */
+    --Desaturated-dark-blue-shadow: hsl(224, 28%, 35%);
+    /* key background, toggle */
+    --Red: hsl(6, 63%, 50%);
+    /* key shadow */
+    --Dark-red: hsl(6, 70%, 34%);
+    /* key background */
+    --Light-grayish-orange: hsl(30, 25%, 89%);
+    /* key shadow */
+    --Grayish-orange: hsl(28, 16%, 65%);
+
+    /* text */
+    --Very-dark-grayish-blue: hsl(221, 14%, 31%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    font-family: 'League Spartan';
+    background: var(--Very-dark-desaturated-blue-keypad);
+    display: grid;
+    place-items: center;
+}
+
+/* * main-grid */
+.grid {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    background: var(--Very-dark-desaturated-blue-main);
+    color: white;
+    border-radius: 15px;
+}
+
+/*  * section-1 */
+.section-1 {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+/* * global styles */
+label {font-size: 1.5rem; padding-bottom: .5rem;}
+
+input::placeholder { color: white; font-size: 1.5rem;}
+input:focus{ outline: none; }
+
+input {
+    display: grid;
+    align-items: center;
+    padding: .5rem 0rem;
+    border-radius: 15px;
+    background: var(--Very-dark-desaturated-blue-keypad);
+    border: none;
+    color: white;
+    padding-left: 1rem;
+    font-size: 1.5rem;
+}
+
+.bill {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    font-size: 1.5rem;
+}
+
+
+/*  * buttons */
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    place-items: center;
+}
+
+.tip-button {
+    display: grid;
+    place-content: center;
+    width: 120px;
+    aspect-ratio: 2/1;
+    background: var(--Light-grayish-orange);
+    box-shadow: 0 5px 1px var(--Grayish-orange);
+    margin: 0.5rem;
+    border-radius: 5px;
+    color: var(--Very-dark-grayish-blue);
+    font-size: 1.8rem;
+}
+.buttons:hover {
+    cursor: pointer;
+}
+
+.buttons h2 { grid-column: 1/-1; justify-self: baseline; }
+
+/*  * split input */
+
+.split {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+/*  * section-2 */
+
+.section-2 {
+    display: grid;
+    place-items: center;
+}
+
+.screen { 
+    display: grid; 
+    background: var(--Very-dark-desaturated-blue-screen);
+    border-radius: 15px;
+    width: 290px;
+    height: 180px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+  
+}
+
+.output{margin-left: auto; font-size: 1.5rem;}
+.output-label{ margin-right: auto;}
+
+.reset {
+    display: flex;
+    place-content: center;
+    padding: .5rem 1rem;
+    color: white;
+    background: var(--Red);
+    box-shadow: 0 6px 1px var(--Dark-red);
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 15px;
+    margin: 1rem;
+    width: 280px;
+}
+.reset:hover{ cursor: pointer; }
+
+
+@media screen and (width >= 768px) {
+
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .screen { 
+        margin-top: 3.5rem;
+        height: 420px;
+    }
+    .card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .output{
+        margin-left: 0;
+        
+    }
+
+}
