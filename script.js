@@ -33,7 +33,7 @@ billInput.addEventListener('input', function() {
         const total =  bill + totalTip
         const totalPerPerson = total / numOfPeople
         tipPerPerson.innerHTML = `$${finalAmount.toFixed(2)}`
-        finalTotal.innerHTML = totalPerPerson.toFixed(2);
+        finalTotal.innerHTML = `$${totalPerPerson.toFixed(2)}`;
     })
     
     btn5.addEventListener('click', () => {
