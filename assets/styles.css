@@ -47,6 +47,7 @@ body {
     background: var(--Very-dark-desaturated-blue-main);
     color: white;
     border-radius: 15px;
+    max-height: 100vh;
 }
 
 /*  * section-1 */
@@ -106,6 +107,10 @@ input {
 }
 .buttons:hover {
     cursor: pointer;
+}
+.tip-button:active {
+    background: var(--Red);
+    box-shadow: 0 6px 1px var(--Dark-red);
 }
 
 .buttons h2 { grid-column: 1/-1; justify-self: baseline; }

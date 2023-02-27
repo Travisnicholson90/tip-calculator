@@ -84,10 +84,12 @@ billInput.addEventListener('input', function() {
         console.log(e);
 
         if(reset) {
-            billInput.value = '0';
-            numOfPeopleInput.value = '0';
+            billInput.value = '';
+            numOfPeopleInput.value = '';
             finalTotal.innerHTML = '$00.00';
             tipPerPerson.innerHTML = '$00.00';
         }
 
     })
+
+   
